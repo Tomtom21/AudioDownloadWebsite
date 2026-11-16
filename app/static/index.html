@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090a0b">
+    <meta name="description" content="A simple way to save audio from a public link.">
+    <title>Audio Download</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="wordmark" href="/" aria-label="Audio Download home">Audio Download</a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="headline">
+        <h1 id="headline">Download audio</h1>
+
+        <form id="download-form" class="download-form">
+          <label for="media-url">PASTE A YOUTUBE LINK</label>
+          <div class="input-row">
+            <input
+              id="media-url"
+              name="url"
+              type="url"
+              placeholder="https://"
+              autocomplete="url"
+              maxlength="2048"
+              required
+            >
+            <button id="download-button" type="submit">
+              <span class="button-label">DOWNLOAD</span>
+              <span class="button-arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <p id="status" class="status" role="status" aria-live="polite">
+            MP3 AUDIO <span class="separator">/</span> UP TO 256 MB
+          </p>
+        </form>
+
+        <ol class="instructions">
+          <li>Paste a public YouTubelink into the field.</li>
+          <li>Select Download to save the audio.</li>
+        </ol>
+      </section>
+    </main>
+  </body>
+</html>
