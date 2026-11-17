@@ -106,8 +106,8 @@ def download_audio(request: DownloadRequest) -> FileResponse:
 
     # Keep each request's source and converted output isolated in its own temporary directory.
     workdir = Path(tempfile.mkdtemp(prefix="audio-download-"))
-    
-    # Once returned, the response owns cleanup; failures are cleaned up in finally.
+
+    # Once returned, the response owns cleanup; failures are cleaned up in the finally block.
     handed_off = False
 
     try:
